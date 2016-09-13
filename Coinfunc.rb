@@ -8,9 +8,10 @@
 
 def coin_sorter(cents_recieved)
 	coins = {}
-	if cents_recieved >= 1
+	if cents_recieved.between?(1, 4)
 		coins[:penny] = cents_recieved
 	end
 	coins
 end
 
+#
