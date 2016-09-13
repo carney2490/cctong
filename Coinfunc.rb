@@ -8,10 +8,12 @@
 
 def coin_sorter(cents_recieved)
 	coins = {}
-	if cents_recieved.between?(1, 4)
+	if cents_recieved == 5
+		coins[:nickel] = cents_recieved / 5
+	elsif cents_recieved.between?(1, 4)
 		coins[:penny] = cents_recieved
 	end
 	coins
 end
 
-#
+#Dollar Coin, Half Dollar, Quarter, Dime, Nickel, Penny, Barter :)
