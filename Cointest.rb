@@ -14,4 +14,8 @@ class TestCoinSorter <Minitest::Test
 		cents_recieved = 2
 		assert_equal({:penny => 2}, coin_sorter(cents_recieved))
 	end
+	def test_5_cents_equals_one_nickel
+		cents_recieved = 5
+		assert_equal({:nickel => 1}, coin_sorter(cents_recieved))
+	end
 end
