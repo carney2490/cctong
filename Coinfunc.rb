@@ -7,5 +7,10 @@
 # Build up your coin_changer using tests. Commit to git after every test.
 
 def coin_sorter(cent_recieved)
-	{}
+	coins = {}
+	if cent_recieved == 1
+		coins[:penny] = 1
+	end
+	coins
 end
+
