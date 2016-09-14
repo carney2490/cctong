@@ -38,4 +38,16 @@ class TestCoinSorter <Minitest::Test
 		cents_received = 25
 		assert_equal({:quarter => 1}, coin_sorter(cents_received))
 	end
+	def test_50_cents_equals_one_half_dollar
+		cents_received = 50
+		assert_equal({:half_dollar => 1}, coin_sorter(cents_received))
+	end
+	def test_1_dollar_equals_one_silver_dollar
+		cents_received = 100
+		assert_equal({:silver_dollar => 1}, coin_sorter(cents_received))
+	end
+	def test_359_cents_equals_three_silver_dollars_one_half_dollar_one_nickel_and_four_pennies
+		cents_received = 359
+		assert_equal({:silver_dollar => 3, :half_dollar => 1, :nickel => 1, :penny => 4}, coin_sorter(cents_received))
+	end
 end
