@@ -8,6 +8,10 @@
 
 def coin_sorter(cents_received)
 	coins = {}
+	if cents_received >= 25
+		coins[:quarter] = cents_received / 25
+		cents_received = cents_received % 25
+	end
 	if cents_received >= 10
 		coins[:dime] = cents_received / 10
 		cents_received = cents_received % 10
