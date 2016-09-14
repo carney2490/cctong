@@ -9,22 +9,20 @@
 def coin_sorter(cents_received)
 	coins = {}
 	if cents_received >= 10
-		coins[:dime] = 1
-		cents_received = cents_received - 10
-	elsif cents_received >= 5
-		coins[:nickel] = 1
-		cents_received = cents_received - 5
-		if cents_received > 0
-			coins[:penny] = cents_received
-		end
-	elsif 
-		cents_received == 5
+		coins[:dime] = cents_received / 10
+		cents_received = cents_received % 10
+	end
+	if cents_received >= 5
 		coins[:nickel] = cents_received / 5
-	elsif cents_received.between?(1, 4)
-		coins[:penny] = cents_received
+		cents_received = cents_received % 5
+	end
+	if cents_received >= 1
+		coins[:penny] = cents_received / 1
 	end
 	coins
 end
+
+
 
 # coins = coin_sorter(6)
 # puts coins
