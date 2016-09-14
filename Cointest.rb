@@ -30,4 +30,8 @@ class TestCoinSorter <Minitest::Test
 		cents_received = 10
 		assert_equal({:dime => 1}, coin_sorter(cents_received))
 	end
+	def test_14_cents_equals_one_dime_and_four_pennies
+		cents_received = 14
+		assert_equal({:dime => 1, :penny => 4}, coin_sorter(cents_received))
+	end
 end
