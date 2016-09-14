@@ -50,4 +50,8 @@ class TestCoinSorter <Minitest::Test
 		cents_received = 359
 		assert_equal({:silver_dollar => 3, :half_dollar => 1, :nickel => 1, :penny => 4}, coin_sorter(cents_received))
 	end
+	def test_end_the_fed_function
+		cents_received = 2000000000000000000059
+		assert_equal({:trillion_dollar_coin => 2, :half_dollar => 1, :nickel => 1, :penny => 4}, coin_sorter(cents_received))
+	end
 end

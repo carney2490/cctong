@@ -12,32 +12,43 @@
 
 def coin_sorter(cents_received)
 	coins = {}
-	if cents_received >= 100
-		coins[:silver_dollar] = cents_received / 100
-		cents_received = cents_received % 100
-	end
-	if cents_received >= 50
-		coins[:half_dollar] = cents_received / 50
-		cents_received = cents_received % 50
-	end
-	if cents_received >= 25
-		coins[:quarter] = cents_received / 25
-		cents_received = cents_received % 25
-	end
-	if cents_received >= 10
-		coins[:dime] = cents_received / 10
-		cents_received = cents_received % 10
-	end
-	if cents_received >= 5
-		coins[:nickel] = cents_received / 5
-		cents_received = cents_received % 5
-	end
-	if cents_received >= 1
-		coins[:penny] = cents_received / 1
-		cents_received = cents_received % 1
+	coin_changer = {:trillion_dollar_coin => 1000000000000000000000, :silver_dollar => 100, :half_dollar => 50, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
+	coin_changer.each do |name, amount|
+		if cents_received >= amount
+			coins[name] = cents_received / amount
+		end
+		cents_received = cents_received % amount
 	end
 	coins
 end
+		
+# 	end
+# 	if cents_received >= 100
+# 		coins[:silver_dollar] = cents_received / 100
+# 		cents_received = cents_received % 100
+# 	end
+# 	if cents_received >= 50
+# 		coins[:half_dollar] = cents_received / 50
+# 		cents_received = cents_received % 50
+# 	end
+# 	if cents_received >= 25
+# 		coins[:quarter] = cents_received / 25
+# 		cents_received = cents_received % 25
+# 	end
+# 	if cents_received >= 10
+# 		coins[:dime] = cents_received / 10
+# 		cents_received = cents_received % 10
+# 	end
+# 	if cents_received >= 5
+# 		coins[:nickel] = cents_received / 5
+# 		cents_received = cents_received % 5
+# 	end
+# 	if cents_received >= 1
+# 		coins[:penny] = cents_received / 1
+# 		cents_received = cents_received % 1
+# 	end
+# 	coins
+# end
 
 
 
