@@ -6,14 +6,35 @@
 
 # Build up your coin_changer using tests. Commit to git after every test.
 
-def coin_sorter(cents_recieved)
+def coin_sorter(cents_received)
 	coins = {}
-	if cents_recieved == 5
-		coins[:nickel] = cents_recieved / 5
-	elsif cents_recieved.between?(1, 4)
-		coins[:penny] = cents_recieved
+	if cents_received >= 5
+		coins[:nickel] = 1
+		coins[:penny] = cents_received - 5
+	elsif 
+		cents_received == 5
+		coins[:nickel] = cents_received / 5
+	elsif cents_received.between?(1, 4)
+		coins[:penny] = cents_received
 	end
 	coins
 end
 
+# coins = coin_sorter(6)
+# puts coins
+
 #Dollar Coin, Half Dollar, Quarter, Dime, Nickel, Penny, Barter :)
+
+
+
+# if cents_received % 100 == 0
+# 	Dollar Coin
+# elsif cents_received % 50 == 0
+# 	Half_dollar
+# elsif cents_received % 25 == 0
+# 	quarter
+# elsif cents_received % 10 == 0
+# 	dime
+
+# 	greater than or equal to
+# 	
