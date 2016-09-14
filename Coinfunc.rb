@@ -10,7 +10,10 @@ def coin_sorter(cents_received)
 	coins = {}
 	if cents_received >= 5
 		coins[:nickel] = 1
-		coins[:penny] = cents_received - 5
+		cents_received = cents_received -5
+		if cents_received > 0
+			coins[:penny] = cents_received
+		end
 	elsif 
 		cents_received == 5
 		coins[:nickel] = cents_received / 5
