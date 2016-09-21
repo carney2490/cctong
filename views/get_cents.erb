@@ -1,0 +1,10 @@
+Hello <%= name %>. How many cents are you giving me?
+
+<form method = "post" action = "/cents">
+	<input type = "number" min = "0" name = "cents">
+	<input type="text" name = "name" value = <%= name %> hidden>
+	<input type = "submit">
+</form>
+
+
+
