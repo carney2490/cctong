@@ -1,10 +1,10 @@
-Okay <%= name %>, what are your three favorite single digit numbers?  I wonder if they add up to <%= age %>...
+Okay <%= name %>, you gave me <%= cents_received %> and I can turn that into <%= coins %> ...
 
 <form method = "post" action = "/results">
-	<input type = "number" max = 9 min = 0 name = "users_fav1">
+	<!-- <input type = "number" max = 9 min = 0 name = "users_fav1">
 	<input type = "number" max = 9 min = 0 name = "users_fav2">
-	<input type = "number" max = 9 min = 0 name = "users_fav3">
+	<input type = "number" max = 9 min = 0 name = "users_fav3"> -->
 	<input type="text" name = "name" value = <%= name %> hidden>
-	<input type="text" name = "cents_recieved" value = <%= cents %> hidden>
+	<input type="text" name = "cents_received" value = <%= cents_received %> hidden>
 	<input type = "submit">
 </form>

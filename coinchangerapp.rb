@@ -17,19 +17,21 @@ end
 
 post '/cents' do
 	cents = params[:cents]
-	name = params[:retrieved_name]
-	redirect '/results?name=' + name + "&cents=" + cents
+	name = params[:name]
+	coins = coin_sorter(cents.to_i)
+	# redirect '/results?name=' + name + "&cents=" + cents
+	"Well #{name}, you gave me #{cents} cents, and I can return that to you in #{coins}"
 end
 
-get '/results' do
-	name = params[:name]
-	cents_recieved = params[:cents]
-	erb :get_results, :locals => {:name => name, :cents => cents}
-end
+# get '/results' do
+# 	name = params[:name]
+# 	cents_received = params[:cents]
+# 	erb :get_results, :locals => {:name => name, :cents_received => cents_received}
+# end
 
-post '/results' do
-	name = params[:name]
-	cents_recieved.to_i = params[:cents]
-	coins
-end
+# post '/results' do
+# 	name = params[:name]
+# 	cents_recieved = params[:cents]
+# 	"#{coins}"
+# end
 # end
