@@ -20,7 +20,11 @@ def coin_sorter(cents_received)
 		end
 		cents_received = cents_received % amount
 	end
-	coins
+	coins.each do |name, value|
+		if value >= 1
+			name
+		end
+	end
 end
 
 # puts "I can tell you the combination of the least amount of coins for the number of cents you have"
