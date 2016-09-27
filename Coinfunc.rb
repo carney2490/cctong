@@ -23,6 +23,15 @@ def coin_sorter(cents_received)
 	coins
 end
 
+def mokeys(change)
+	change = ""
+	coins.each do
+		change << coin
+	end
+end
+
+
+
 # puts "I can tell you the combination of the least amount of coins for the number of cents you have"
 # print "How many cents do you have?"
 # cents_received = gets.chomp
