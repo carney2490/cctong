@@ -26,6 +26,9 @@ end
 def monkeys(coin_hash)
 	change = ""
 	coin_hash.each do |name, amount|
+		if amount > 1
+			name = name + "s"
+		end
 		change << "," + amount.to_s + " " + name.to_s
 	end
 	change
