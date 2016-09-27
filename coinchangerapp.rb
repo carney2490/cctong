@@ -20,7 +20,7 @@ post '/cents' do
 	name = params[:name]
 	coins = coin_sorter(cents.to_i)
 	# redirect '/results?name=' + name + "&cents=" + cents
-	erb :get_try_again, :locals => {:name => name}
+	erb :get_try_again, :locals => {:name => name, :cents => cents, :coins => coins}
 end
 
 
