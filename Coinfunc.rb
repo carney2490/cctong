@@ -11,8 +11,10 @@
 # 3) see if you can find a way to only have a single if statement (think iteration)
 
 
+
 def coin_sorter(cents_received)
 	coins = {}
+	change = []
 	coin_changer = {:trillion_dollar_coin => 1000000000000000000000, :silver_dollar => 100, :half_dollar => 50, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
 	coin_changer.each do |name, amount|
 		if cents_received >= amount
@@ -21,12 +23,10 @@ def coin_sorter(cents_received)
 		cents_received = cents_received % amount
 	end
 	coins.each do |name, value|
-		if value >= 1
-			name
+		change <<
 		end
-	end
+	change
 end
-
 # puts "I can tell you the combination of the least amount of coins for the number of cents you have"
 # print "How many cents do you have?"
 # cents_received = gets.chomp
@@ -81,4 +81,3 @@ end
 # 	dime
 
 # 	greater than or equal to
-# 	

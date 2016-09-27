@@ -4,7 +4,7 @@ require_relative "coinfunc.rb"
 class TestCoinSorter <Minitest::Test
 	def test_25_equals_quarter
 		cents_received = 25
-		assert_equal({quarter}, coin_sorter(cents_received))
+		assert_equal({quarter => 1}, coin_sorter(cents_received))
 	end
 	
 	# def test_two_cents_equals_two_pennies
