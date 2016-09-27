@@ -23,10 +23,10 @@ def coin_sorter(cents_received)
 	coins
 end
 
-def monkeys(change)
+def monkeys(coin_hash)
 	change = ""
-	coins.each do |name, amount|
-		change << coin
+	coin_hash.each do |name, amount|
+		change << name.to_s
 	end
 end
 
