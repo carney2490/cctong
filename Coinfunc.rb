@@ -22,62 +22,7 @@ def coin_sorter(cents_received)
 		end
 		cents_received = cents_received % amount
 	end
-	coins.each do |name, value|
-		change <<
-		end
-	change
+	coins.each do |coin, amount|
+            change.push(coin)
+	end
 end
-# puts "I can tell you the combination of the least amount of coins for the number of cents you have"
-# print "How many cents do you have?"
-# cents_received = gets.chomp
-
-# coins = coin_sorter([gets.chomp])
-# puts coins
-		
-# 	end
-# 	if cents_received >= 100
-# 		coins[:silver_dollar] = cents_received / 100
-# 		cents_received = cents_received % 100
-# 	end
-# 	if cents_received >= 50
-# 		coins[:half_dollar] = cents_received / 50
-# 		cents_received = cents_received % 50
-# 	end
-# 	if cents_received >= 25
-# 		coins[:quarter] = cents_received / 25
-# 		cents_received = cents_received % 25
-# 	end
-# 	if cents_received >= 10
-# 		coins[:dime] = cents_received / 10
-# 		cents_received = cents_received % 10
-# 	end
-# 	if cents_received >= 5
-# 		coins[:nickel] = cents_received / 5
-# 		cents_received = cents_received % 5
-# 	end
-# 	if cents_received >= 1
-# 		coins[:penny] = cents_received / 1
-# 		cents_received = cents_received % 1
-# 	end
-# 	coins
-# end
-
-
-
-# coins = coin_sorter(6)
-# puts coins
-
-#Dollar Coin, Half Dollar, Quarter, Dime, Nickel, Penny, Barter :)
-
-
-
-# if cents_received % 100 == 0
-# 	Dollar Coin
-# elsif cents_received % 50 == 0
-# 	Half_dollar
-# elsif cents_received % 25 == 0
-# 	quarter
-# elsif cents_received % 10 == 0
-# 	dime
-
-# 	greater than or equal to
