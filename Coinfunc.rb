@@ -28,6 +28,7 @@ def monkeys(coin_hash)
 	coin_hash.each do |name, amount|
 		change << name.to_s
 	end
+	change
 end
 
 
