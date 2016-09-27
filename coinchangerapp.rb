@@ -24,6 +24,17 @@ post '/cents' do
 	erb :get_try_again, :locals => {:name => name}
 end
 
+post '/get_try_again' do
+	cents = params[:cents]
+	name = params[:name]
+	coins = coin_sorter(cents.to_i)
+	if "Yes"
+	erb :get_cents, :locals => {:name => name}
+	else
+		erb :thank_you
+	end
+end
+
 
 
 # get '/results' do
