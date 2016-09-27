@@ -14,7 +14,7 @@
 
 def coin_sorter(cents_received)
 	coins = {}
-	change = []
+	change = ""
 	coin_changer = {:trillion_dollar_coin => 1000000000000000000000, :silver_dollar => 100, :half_dollar => 50, :quarter => 25, :dime => 10, :nickel => 5, :penny => 1}
 	coin_changer.each do |name, amount|
 		if cents_received >= amount
@@ -23,6 +23,7 @@ def coin_sorter(cents_received)
 		cents_received = cents_received % amount
 	end
 	coins.each do |coin, amount|
-            change.push(coin)
+			change << coin
 	end
+	change
 end
