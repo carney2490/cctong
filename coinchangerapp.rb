@@ -21,7 +21,7 @@ post '/cents' do
 	coins = coin_sorter(cents.to_i)
 	# redirect '/results?name=' + name + "&cents=" + cents
 	"Well #{name}, you gave me #{cents} cents, and I can return that to you in #{coins}.  Do you have any more cents you would like me to change into coins for you?"
-	erb :get_cents, :locals => {:name => name}
+	erb :get_try_again, :locals => {:name => name}
 end
 
 
