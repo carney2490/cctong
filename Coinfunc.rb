@@ -36,7 +36,7 @@ def monkeys(coin_hash)
 		else
 			name
 		end
-		change << "," + amount.to_s + " " + name.to_s
+		change << "," + amount.to_s + " " + name
 	end
 	change
 end
