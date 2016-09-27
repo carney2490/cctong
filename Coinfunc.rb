@@ -23,9 +23,9 @@ def coin_sorter(cents_received)
 	coins
 end
 
-def mokeys(change)
+def monkeys(change)
 	change = ""
-	coins.each do
+	coins.each do |name, amount|
 		change << coin
 	end
 end
