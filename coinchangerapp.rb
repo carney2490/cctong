@@ -1,4 +1,4 @@
-require_relative 'coinfunc.rb'
+require_relative 'Coinfunc.rb'
 require 'sinatra'
 
 get '/' do
