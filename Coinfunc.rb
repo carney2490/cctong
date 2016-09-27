@@ -27,10 +27,10 @@ def monkeys(coin_hash)
 	change = ""
 	coin_hash.each do |name, amount|
 		name = name.to_s
-		if amount > 1 and name == :penny
+		if amount > 1 && name == "penny"
 			name = "pennies"
-			elsif amount == 1 and name == :penny
-				name = "penny"
+			# elsif amount == 1 && name == "penny"
+			# 	name = "penny"
 		elsif amount > 1
 			name = name.to_s + "s"
 		else
